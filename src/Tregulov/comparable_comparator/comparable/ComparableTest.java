@@ -1,4 +1,4 @@
-package Tregulov.comparable;
+package Tregulov.comparable_comparator.comparable;
 
 import org.junit.jupiter.api.Test;
 
