@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class GroupingExampleTest {
+public class GroupingAndPartitioningExampleTest {
 
     @Test
     public void groupingByExample() {
@@ -24,7 +24,11 @@ public class GroupingExampleTest {
         Map<String, List<Person>> groupByName = people.stream()
             .collect(Collectors.groupingBy(Person::getName));
 
+        Map<Boolean, List<Person>> partitionedPeople = people.stream()
+            .collect(Collectors.partitioningBy(p -> p.getAge() > 30));
+
         System.out.println(groupByName);
+        System.out.println(partitionedPeople);
     }
 }
 
